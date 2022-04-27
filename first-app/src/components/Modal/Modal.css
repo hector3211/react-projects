@@ -1,0 +1,12 @@
+.modal-background {
+  z-index: 5;
+  background-color: grey;
+  position: fixed;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+  left: 100px;
+  bottom: 300px;
+  border-radius: 3px;
+  text-align: center;
+}

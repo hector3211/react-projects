@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+}
+.header-brand {
+  padding: 5px;
+  margin-left: 10px;
+}
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 10px;
+}
+.header-link {
+  padding: 5px;
+}
