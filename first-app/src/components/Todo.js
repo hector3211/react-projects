@@ -9,7 +9,7 @@ export default function Todo(props) {
     });
   };
   return (
-    <div className="card-container container">
+    <div className="card-container container-fluid p-0">
       <div className="card w-50">
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>

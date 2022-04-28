@@ -6,7 +6,7 @@ import MainNavigation from "./components/MainNavigation/MainNavigation";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <MainNavigation />
       <Routes>
         <Route path="/" element={<AllCards />} />
