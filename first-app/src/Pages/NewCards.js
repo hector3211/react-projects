@@ -4,17 +4,15 @@ import CardFormData from "../components/CardList/CardFormData";
 
 export default function NewCards() {
   const navigate = useNavigate();
+  const firebaseRoute = process.env.FIREBASEROUTE;
   function addCardHandler(cardData) {
-    fetch(
-      "https://react-tutorial-47540-default-rtdb.firebaseio.com/cards.json",
-      {
-        method: "POST",
-        body: JSON.stringify(cardData),
-        header: {
-          "content-type": "application/json",
-        },
-      }
-    ).then(() => {
+    fetch(firebaseRoute, {
+      method: "POST",
+      body: JSON.stringify(cardData),
+      header: {
+        "content-type": "application/json",
+      },
+    }).then(() => {
       navigate("/");
     });
   }

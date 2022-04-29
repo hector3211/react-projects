@@ -5,8 +5,9 @@ import SingleCard from "../components/CardList/SingleCard";
 export default function AllCards() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedCards, setIsLoadedCards] = useState([]);
+  const firebaseRoute = process.env.FIREBASEROUTE;
   useEffect(() => {
-    fetch("https://react-tutorial-47540-default-rtdb.firebaseio.com/cards.json")
+    fetch(firebaseRoute)
       .then((response) => {
         return response.json();
       })
