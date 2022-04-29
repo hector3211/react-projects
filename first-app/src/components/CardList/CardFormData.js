@@ -1,8 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
-export default function CardFormdata() {
-  const [title, setTitle] = useState();
-  const [url, setUrl] = useState();
+export default function CardFormdata(props) {
   const titleInputRef = useRef();
   const urlInputRef = useRef();
   const handleSubmit = (e) => {
@@ -13,11 +11,7 @@ export default function CardFormdata() {
       title: enteredTitle,
       image: enteredUrl,
     };
-    console.log(cardData);
-  };
-  const resetInputs = () => {
-    setTitle("");
-    setUrl("");
+    props.onAddCard(cardData);
   };
   return (
     <div>
@@ -30,7 +24,6 @@ export default function CardFormdata() {
             type="text"
             className="form-control"
             id="title"
-            value={title}
           />
         </div>
         <div className="form-group">
@@ -40,7 +33,6 @@ export default function CardFormdata() {
             type="url"
             className="form-control"
             id="image"
-            value={url}
           />
         </div>
         <button type="submit" className="btn btn-primary">
